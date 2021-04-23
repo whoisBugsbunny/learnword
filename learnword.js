@@ -1,4 +1,5 @@
 const result = document.getElementById('testresult');
+const stems = document.getElementById('stems');
 var apikey = "ec59a17f-efbe-411e-a876-7a52ec2e2cbc";
 var word;
 let diction = [];
@@ -15,8 +16,9 @@ async function getdata() {
             result.innerHTML = word + " : " + "suggest: " + data[0];
         } else {
             result.innerHTML = word + " : " + data[0].shortdef;
+            stems.innerHTML = word + " : " + data[0].meta.stems;
         }
-        // result.innerHTML = data[0];
+        console.log(data[0]);
     } else {
         console.log("no result found");
     }
