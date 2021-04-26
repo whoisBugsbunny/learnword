@@ -6,14 +6,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>learnword</title>
+    <link rel="icon" href="lwlogos.jpg">
+    <link href="learnword.css" rel="stylesheet">
+    <!-- google font Sansita Swashed and font1 -->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
 </head>
 
-<body>
-    <div id="testresult" class="result">
-        test
+<body class="font2">
+    <nav>
+        <div class="wraper">
+            <div class="logo">LW</div>
+            <div class="head">Words</div>
+            <div><button class="btn burger-btn" onclick="closenav()">&#9776;</button></div>
+        </div>
+        <div class="navpg navclose font1">
+            <button class="btn close text-prime" onclick="closenav()">&#9932;</button>
+            <ul class="navlist text-center">
+                <li>home</li>
+                <li>words</li>
+                <li>about</li>
+                <li>developers</li>
+            </ul>
+        </div>
+    </nav>
+    <div class="result text-center">
+        <div id="word" class="word">
+        </div>
+        <div id="definition"></div>
+        <div id="example"></div>
+        <div id="synonyms"></div>
+        <button class="btn btn-prime" onclick="getdata()">click</button>
     </div>
-    <div id="stems"></div>
-    <input type="button" value="click" onclick="getdata()">
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="learnword.js"></script>
