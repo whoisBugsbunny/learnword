@@ -8,7 +8,9 @@ const navlist = document.querySelectorAll('.navlist li');
 var g_word = "";
 let diction = [];
 $.getJSON("diction.json", function(obj) {
-    wordarr = obj[0];
+    // wordarr = obj[0];
+    wordarr = obj[Math.floor((Math.random() * obj.length))];
+    console.log(obj.length);
     console.log(wordarr);
     g_word = wordarr.word;
     word.innerHTML = wordarr.word;
