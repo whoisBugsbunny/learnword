@@ -191,6 +191,9 @@ hr {
 }
 
 .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     outline: none;
     padding: 5px 10px;
 }
@@ -228,7 +231,9 @@ hr {
     color: #09788B;
 }
 
-#worddiv {
+#worddiv,
+#about,
+#wordpage {
     padding: 10px;
 }
 
@@ -263,4 +268,16 @@ hr {
 .examplebox>span,
 .synonymsbox>span {
     color: #09788B;
+}
+
+.bottombtnrow {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* about */
+
+.aboutpara {
+    margin: 10px;
 }
