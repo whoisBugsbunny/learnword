@@ -9,11 +9,32 @@
     <link rel="icon" href="lwlogos.jpg">
     <link href="learnword.css" rel="stylesheet">
     <!-- google font Sansita Swashed and font1 -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
 
 </head>
 
 <body class="font2">
+
+    <!-- test box -->
+    <div id="testdiv" class="d-none">
+        <div class="testbox">
+            <div style="display: flex;">
+                <button class="btn btn-prime pos-right" style="letter-spacing: 0;" onclick="wordTest()">&#9932;</button>
+            </div>
+            <div class="testboxdiv">
+                <div class="word">word</div>
+                <div class="opt">1</div>
+                <div class="opt">2</div>
+                <div class="opt">3</div>
+                <div class="opt">4</div>
+            </div>
+            <div style="bottom: 0;justify-content: center;display: flex;"><button class="btn btn-prime w-50" style="bottom: 0;" onclick="wordTest()">Submit</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- navigation bar -->
     <nav>
         <div class="wraper">
             <div class="logo">LW</div>
@@ -30,14 +51,33 @@
             </ul>
         </div>
     </nav>
-    <div class="result text-center">
-        <div id="word" class="word">
+
+    <!-- main body content -->
+    <div id="worddiv" class="container">
+        <div class="result">
+            <div class="word">
+                <span id="word"></span><span class='material-icons speakericon'>volume_up</span>
+            </div>
+            <hr>
+            <div class="definitionbox">
+                <span>definition :</span>
+                <div id="definition"></div>
+            </div>
+            <hr>
+            <div class="examplebox">
+                <span>example :</span>
+                <div id="example"></div>
+            </div>
+            <hr>
+            <div class="synonymsbox">
+                <span>synonyms :</span>
+                <div id="synonyms"></div>
+            </div>
+            <hr>
         </div>
-        <div id="definition"></div>
-        <div id="example"></div>
-        <div id="synonyms"></div>
-        <button class="btn btn-prime" onclick="getdata()">click</button>
+        <button class="btn btn-prime font2" onclick="wordTest()">I know this word</button>
     </div>
+
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="learnword.js"></script>
