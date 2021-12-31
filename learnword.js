@@ -24,6 +24,7 @@ function randomword() {
             $('#synonyms').append("<div class='synon'>" + ele + "</div> ");
         }
     });
+    saysynon();
 }
 randomword();
 
@@ -83,14 +84,16 @@ speakericon.addEventListener("click", () => {
     window.speechSynthesis.speak(msg);
 });
 
-setTimeout(() => {
-    const synon = document.querySelectorAll('.synon');
-    synon.forEach(ele => {
-        ele.addEventListener("click", (e) => {
-            window.speechSynthesis.cancel();
-            var msg = new SpeechSynthesisUtterance();
-            msg.text = ele.textContent;
-            window.speechSynthesis.speak(msg);
+function saysynon() {
+    setTimeout(() => {
+        const synon = document.querySelectorAll('.synon');
+        synon.forEach(ele => {
+            ele.addEventListener("click", (e) => {
+                window.speechSynthesis.cancel();
+                var msg = new SpeechSynthesisUtterance();
+                msg.text = ele.textContent;
+                window.speechSynthesis.speak(msg);
+            });
         });
-    });
-}, 500);
+    }, 500);
+}
